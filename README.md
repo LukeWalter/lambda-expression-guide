@@ -138,8 +138,10 @@ For the incorrect ones, what needs to be fixed?
    |-------------|-------------------|
    | `Integer t` | returns `boolean` |
    
+   
+   
    ```java
-   boolean test(Integer t); // For Predicate<String>
+   boolean test(String t); // For Predicate<String>
    ```
    
    | Input | Output |
