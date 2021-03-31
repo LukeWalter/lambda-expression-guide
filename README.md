@@ -171,10 +171,10 @@ For the incorrect ones, what needs to be fixed?
    ```
    
    **NOTE:** The type for x doesn't need to be explicitly stated in our lambda. If the compiler has access to the
-   `SomeInterface` class, then it will already know what types of variables that `test` should take in as parameters.
-   As long as the **number** of parameters in your lambda expression is the same as the number of parameters in `myMethod`, 
+   `Predicate` class, then it will already know what types of variables that `test` should take in as parameters.
+   As long as the **number** of parameters in your lambda expression is the same as the number of parameters in `test`, 
    then the compiler will treat each parameter in the lambda as if they were the same data type as the respective parameters
-   in `myMethod`.
+   in `test`.
    
    ```java
     // These are the same as the lambda expressions above!
