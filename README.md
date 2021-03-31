@@ -53,7 +53,7 @@
    SomeInterface lambda = (x, y) -> { return x + y; };
    ```
    
-   **NOTE** The types for x and y don't need to be explicitly stated in our lambda. If the compiler has access to the
+   **NOTE:** The types for x and y don't need to be explicitly stated in our lambda. If the compiler has access to the
    `SomeInterface` class, then it will already know what types of variables that `myMethod` should take in as parameters.
    As long as the **number** of parameters in your lambda expression is the same as the number of parameters in `myMethod`, 
    then the compiler will treat each parameter in the lambda as if they were the same data type as the respective parameters
