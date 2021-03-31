@@ -9,7 +9,7 @@
       int myMethod(int x, int y);
    
    }
-   ```java
+   ```
    
    **NOTE:** The interface you're using can only have one abstract method. If there are more, then
    the compiler will no longer be able to infer the parameters and return type of the method
@@ -20,13 +20,13 @@
    
    ```java
    SomeInterface lambda;
-   ```java
+   ```
    
 1. Identify the parameters (input) and return type (output) of the method in your interface.
    
    ```java
    int myMethod(int x, int y);
-   ```java
+   ```
    
    
    | Input | Output        |
@@ -51,7 +51,7 @@
    
    ```java
    SomeInterface lambda = (x, y) -> { return x + y; };
-   ```java
+   ```
    
    **NOTE** The types for x and y don't need to be explicitly stated in our lambda. If the compiler has access to the
    `SomeInterface` class, then it will already know what types of variables that `myMethod` should take in as parameters.
@@ -61,7 +61,7 @@
    
    ```java
    SomeInterface lambda = (int x, int y) -> { return x + y; }; // This is the same as the lambda expression above!
-   ```java
+   ```
    
 ### Review
 
@@ -77,5 +77,5 @@ Using the `SomeInterface` functional interface, which of the following lambda ex
       String s = "" + x + y;
       return s.length();
    };
-   ```java
+   ```
 1. `SomeInterface f = (x, y) -> { return (int)(Math.random()); };`
