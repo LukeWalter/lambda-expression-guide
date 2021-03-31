@@ -177,8 +177,9 @@ For the incorrect ones, what needs to be fixed?
    in `myMethod`.
    
    ```java
-   Predicate<Integer> p = (int x) -> { return x >= 0; }; // These are the same as the lambda expressions above!
-   Predicate<String> strCheck = (String s) -> { return s.equals(""); }; // These are the same as the lambda expressions above!
+    // These are the same as the lambda expressions above!
+   Predicate<Integer> p = (int x) -> { return x >= 0; };
+   Predicate<String> strCheck = (String s) -> { return s.equals(""); };
    ```
    
    
