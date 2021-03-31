@@ -39,8 +39,8 @@
    
    ```java
    ( parameters ) -> { function implementation; };
-   ```java
-   
+   ```
+  
 1. In order to build a valid lambda expression for our `SomeInterface` reference, the following must be true:
    
    1.  The lambda must take in the same parameters as the method in `SomeInterface`.
@@ -66,15 +66,16 @@
 ### Review
 
 Using the `SomeInterface` functional interface, which of the following lambda expressions are valid?
+For the incorrect ones, what needs to be fixed?
 
-1. `SomeInterface a = (x, y) -> { return x * y + x + 2; };`
+1. `javaSomeInterface a = (x, y) -> { return x * y + x + 2; };`
 1. `SomeInterface b = (x) -> { return x; };`
 1. `SomeInterface c = (a, b) -> { return a + b; };`
-1. `SomeInterface d = (x, y) -> { return x.toString() + y.toString(); };`
+1. `SomeInterface d = (x, y) -> { return Integer.toString(x) + Integer.toString(y); };`
 1. 
    ```java
    SomeInterface e = (x, y) -> {
-      String s = "" + x + y;
+      String s = Integer.toString(x) + Integer.toString(y);
       return s.length();
    };
    ```
