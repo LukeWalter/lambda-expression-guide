@@ -68,7 +68,7 @@
 Using the `SomeInterface` functional interface, which of the following lambda expressions are valid?
 For the incorrect ones, what needs to be fixed?
 
-1. `javaSomeInterface a = (x, y) -> { return x * y + x + 2; };`
+1. `SomeInterface a = (x, y) -> { return x * y + x + 2; };`
 1. `SomeInterface b = (x) -> { return x; };`
 1. `SomeInterface c = (a, b) -> { return a + b; };`
 1. `SomeInterface d = (x, y) -> { return Integer.toString(x) + Integer.toString(y); };`
