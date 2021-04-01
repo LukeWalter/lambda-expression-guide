@@ -205,7 +205,15 @@ For the incorrect ones, what needs to be fixed?
 1. 
    ```java
    Predicate<String> f = (s) -> {
-      return s.length() >= 15;
+      
+      for (int i = 0; i < s.length(); i++) {
+         if (i % 5 == 0 && s.charAt(i) == 'a')   
+            return true;
+            
+      } // for
+      
+      return false;
+      
    };
    ```
 
