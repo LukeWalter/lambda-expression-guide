@@ -8,7 +8,7 @@
    public interface SomeInterface {
       int myMethod(int x, int y);
    
-   }
+   } // SomeInterface
    ```
    
    **NOTE:** The interface you're using can only have one abstract method. If there are more, then
@@ -89,7 +89,7 @@ For the incorrect ones, what needs to be fixed?
    public interface Predicate<T> {
       boolean test(T t);
    
-   }
+   } // Predicate
    ```
    
    **NOTE:** The interface you're using can only have one abstract method. If there are more, then
@@ -116,7 +116,7 @@ For the incorrect ones, what needs to be fixed?
    public interface Predicate<Integer> {
       boolean test(Integer t);
    
-   }
+   } // Predicate
    ```
    
    If we use `String` instead, our variant of `Predicate` will look like this:
@@ -125,7 +125,7 @@ For the incorrect ones, what needs to be fixed?
    public interface Predicate<String> {
       boolean test(String t);
    
-   }
+   } // Predicate
    ```
    
 1. Identify the parameters (input) and return type (output) of the method in your interface.
@@ -281,7 +281,7 @@ public static void forEach(int[] numbers, Function<Integer,Integer> f) {
    
    } // for
 
-} // printMatches
+} // forEach
 
 ```
 
