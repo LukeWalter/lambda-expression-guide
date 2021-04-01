@@ -221,3 +221,67 @@ For the incorrect ones, what needs to be fixed?
 
 ## Testing and Using Lambdas
 
+If we're using the `Predicate` interface, this is an example of how the abstract method could be created and called:
+
+```java
+
+// Checks if an input character is the character 'c'
+Predicate<Character> p = c -> return c == 'c';
+
+boolean one = p.test('c'); // p.test('c') returns true
+boolean two = p.test('d'); // p.test('d') returns false
+
+if (one) System.out.println("Test one passed!"); // passes
+if (two) System.out.println("Test two passed!"); // fails
+
+```
+
+In this example, an object is created. This object has a reference type of `Predicate<Character>`, and the object
+created by our lambda expression is an implementing class of that interface. The lambda expression determines what
+the `test` method in our implementing class actually does. In order to access and use that test function, we take our
+reference, `p`, and call the `test` method that it contains. As with any instance method, the arguments we use need
+to match up with the parameters defined in the method, so `p.test` takes in a single character.
+
+
+
+## Lambda Expression Code Examples
+
+```java
+
+public static void printMatches(String[] strings, Predicate<String> p) {
+
+   // for each String in the input String array
+   
+   for (String s : strings) {
+      
+      // print if that String passes the test from the input Predicate
+      
+      if (p.test(s)) {
+         System.out.println(s);
+      
+      } // if
+   
+   } // for
+
+} // printMatches
+
+```
+
+```java
+
+public static void forEach(int[] numbers, Function<Integer,Integer> f) {
+
+   // for each int in the input int array
+   
+   for (int x : numbers) {
+      
+      // give that int a new value based on the method from the input Function
+      x = f.apply(x);
+   
+   } // for
+
+} // printMatches
+
+```
+
+
