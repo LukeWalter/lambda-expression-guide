@@ -186,18 +186,30 @@ For the incorrect ones, what needs to be fixed?
    
 ### Review
 
-Using the `SomeInterface` functional interface, which of the following lambda expressions are valid?
+Using the `Predicate<Integer>` and `Predicate<String>` functional interface, which of the following lambda expressions are valid?
 For the incorrect ones, what needs to be fixed?
 
-1. `SomeInterface a = (x, y) -> { return x * y + x + 2; };`
-1. `SomeInterface b = (x) -> { return x; };`
-1. `SomeInterface c = (a, b) -> { return a + b; };`
-1. `SomeInterface d = (x, y) -> { return Integer.toString(x) + Integer.toString(y); };`
+1. `Predicate<Integer> a = (x) -> { return x % 2 == 0; };`
+1. `Predicate<Integer> b = (x) -> { return "" + x + x; };`
 1. 
    ```java
-   SomeInterface e = (x, y) -> {
-      String s = Integer.toString(x) + Integer.toString(y);
-      return s.length();
+   Predicate<Integer> c = (x) -> { 
+      if (x > 25 || x * x < 25)
+         return true;
+         
+      return false;
    };
    ```
-1. `SomeInterface f = (x, y) -> { return (int)(Math.random()); };`
+1. `Predicate d = (obj) -> { return obj.toString() != null; };`
+1. `Predicate<String> e = s -> return true;`
+1. 
+   ```java
+   Predicate<String> f = (s) -> {
+      return s.length() >= 15;
+   };
+   ```
+
+
+
+## Testing and Using Lambdas
+
